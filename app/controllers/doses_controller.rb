@@ -25,7 +25,7 @@ class DosesController < ApplicationController
     @dose = Dose.find(params[:id])
     @dose.destroy
     # no need for app/views/tasks/destroy.html.erb
-    redirect_to cocktails_path
+    redirect_to cocktail_path(@dose.cocktail)
   end
 
   private

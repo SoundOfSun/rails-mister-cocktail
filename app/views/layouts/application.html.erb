@@ -2,6 +2,10 @@
 <html>
   <head>
     <title>RailsMisterCocktail</title>
+    <!-- Add these line for detecting device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +13,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render  'shared/navbar'%>
+    <div class="container text-center">
+      <div class="restaurants">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'shared/footer'%>
   </body>
 </html>
