@@ -9,3 +9,15 @@
 .btn-light:hover {
   opacity: 1;
 }
+.btn-primary {
+  background-color: rgb(26,139,157);
+}
+.fa.fa-trash {
+  font-size: 24px;
+  margin-left: 10px;
+  color: rgb(26,139,157);
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+  }
+}

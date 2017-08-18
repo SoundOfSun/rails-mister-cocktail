@@ -5,6 +5,10 @@
   background-position: center;
   color: white;
   position: relative;
+  transition: 0.4s;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 .card-user {
   position: absolute;
