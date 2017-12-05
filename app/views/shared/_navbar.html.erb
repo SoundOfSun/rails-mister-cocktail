@@ -18,9 +18,16 @@
       <div class="dropdown">
         <img src="https://kitt.lewagon.com/placeholder/users/SoundOfSun" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li>
+            <%= link_to about_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+              About
+            <% end %>
+          </li>
+          <li>
+            <%= link_to cocktails_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+              Cocktails
+            <% end %>
+          </li>
         </ul>
       </div>
     </div>
@@ -31,9 +38,16 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
+        <li>
+          <%= link_to about_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+            About
+          <% end %>
+        </li>
+        <li>
+          <%= link_to cocktails_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+            Cocktails
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
