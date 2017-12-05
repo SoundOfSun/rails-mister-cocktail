@@ -1,25 +1,28 @@
-<h1>Welcome to Mister Cocktail !</h1>
-<h2>All cocktails:</h2>
-
-<%= link_to new_cocktail_path do %>
-  <div class="btn btn-primary">
-    Add a new cocktail
-  </div>
-<% end %>
-
-
-<div class="container-fluid">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.athensrumfestival.com/wp-content/uploads/2016/06/test-search.jpg');">
-          <div class="card-category">Trendy</div>
-          <div class="card-description">
-            <h2><%= cocktail.name %></h2>
-            <%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"  %>
-          </div>
-        </div>
-      </div>
+<div class="cocktails-layout">
+  <div class="cocktails-header">
+    <h1>ALL COCKTAILS</h1>
+    <%= link_to new_cocktail_path, class: 'add-btn' do %>
+      Add a new cocktail
     <% end %>
   </div>
+
+  <div class="cocktails-list">
+    <div class="container-fluid">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.athensrumfestival.com/wp-content/uploads/2016/06/test-search.jpg');">
+              <div class="card-category">Trendy</div>
+              <div class="card-description">
+                <h2><%= cocktail.name %></h2>
+                <%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"  %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+

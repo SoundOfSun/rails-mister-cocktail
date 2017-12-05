@@ -55,3 +55,26 @@ a.sns-btn {
 a.sns-btn-phone {
   border: 1px solid $orange;
 }
+
+/* ADD btn */
+a.add-btn {
+  background-color: $white;
+  padding: 10px 15px;
+  box-shadow: 0 10px 0 rgba(0,0,0,0.1);
+  position: relative;
+
+  &:link, &:hover, &:active, &:focus, &:visited {
+    text-decoration: none;
+    color: $orange;
+  }
+
+  &:hover {
+    box-shadow: 0 7px 0 rgba(0,0,0,0.1);
+    top: 3px;
+  }
+
+  &:active {
+    box-shadow: 0 0px 0 rgba(0,0,0,0.1);
+    top: 10px;
+  }
+}
