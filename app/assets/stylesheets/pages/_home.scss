@@ -12,11 +12,17 @@
 .home-header {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   height: 30%;
-  padding-left: 100px;
+}
+
+.home-header-content {
+  display: block;
+  text-align: center;
 
   h6 {
     font-size: 24px;
+    margin: 0;
   }
 
   #title {
@@ -25,12 +31,18 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .home-header {
+    justify-content: flex-start!important;
+    padding-left: 100px;
+  }
+}
+
 /* Input */
 .home-input {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 40vh;
 }
 
 .home-form {
@@ -40,15 +52,15 @@
 
   /* This bit draws the box around it */
   border: none;
-  padding: 10px 20px;
+  padding: 10px 5px;
 
-  width: 40%;
+  width: 80%;
   background-color: white;
   box-shadow: 0 15px 0 rgba(0,0,0,0.1);
 
   input {
     background-color: transparent;
-    padding: 0 10px;
+    padding: 0 5px;
 
     /* Tell the input to use all the available space */
     flex-grow: 2;
@@ -65,8 +77,46 @@
     /* Just a little styling to make it pretty */
     border: none;
     background: none;
-    color: black;
-    font-size: 24px;
+    color: $orange;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+  .home-input {
+    position: absolute;
+    bottom:70px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home-input {
+    height: 30vh;
+  }
+
+  .home-form {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .home-input {
+    height: 40vh;
+  }
+  .home-form {
+    width: 40%;
+    padding: 10px 20px;
+
+    input {
+      padding: 0 10px;
+    }
+
+    button {
+      font-size: 24px;
+    }
   }
 }
 
@@ -80,9 +130,12 @@
   align-items: center;
 }
 
-.home-links {
-  padding: 15px 30px;
+.home-links, .phone-home-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.home-links {
+  padding: 15px 30px;
 }

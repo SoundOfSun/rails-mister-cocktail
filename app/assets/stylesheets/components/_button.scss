@@ -32,19 +32,26 @@
 }
 
 /* SNS btn */
-a.sns-btn {
+a.sns-btn, a.sns-btn-phone {
   flex: 0 0 30%;
   text-align: center;
   margin: 0 5px;
-  padding: 10px 12px;
   border-radius: 50px;
+  padding: 10px 12px;
 
   &:link, &:hover, &:active, &:focus, &:visited {
     text-decoration: none;
+    color: $orange;
   }
+}
 
+a.sns-btn {
   &:hover {
     background-color: white;
     box-shadow: 0 10px 0 rgba(0,0,0,0.1);
   }
+}
+
+a.sns-btn-phone {
+  border: 1px solid $orange;
 }
