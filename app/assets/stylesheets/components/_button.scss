@@ -1,17 +1,26 @@
+/* Medium btn */
 .btn-light {
   color: rgb(153,153,153);
   border: 1px solid rgb(153,153,153);
   padding: 10px 15px;
   border-radius: 50px;
   opacity: 0.8;
-  text-decoration: none;
+
+  &:link, &:hover, &:active, &:focus, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }
-.btn-light:hover {
-  opacity: 1;
-}
+
+/* Quick fix */
 .btn-primary {
   background-color: rgb(26,139,157);
 }
+
+/* Trashbin btn */
 .fa.fa-trash {
   font-size: 24px;
   margin-left: 10px;
@@ -19,5 +28,23 @@
   opacity: 1;
   &:hover {
     opacity: 0.8;
+  }
+}
+
+/* SNS btn */
+a.sns-btn {
+  flex: 0 0 30%;
+  text-align: center;
+  margin: 0 5px;
+  padding: 10px 12px;
+  border-radius: 50px;
+
+  &:link, &:hover, &:active, &:focus, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.1);
   }
 }

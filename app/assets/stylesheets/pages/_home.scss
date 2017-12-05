@@ -1,4 +1,88 @@
 // Specific CSS for your home-page
-h1 {
-  color: rgb(26,139,157);
+.home-layout {
+  height: calc(100vh - 70px);
+  background-image: url('banner-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+
+/* Intro text */
+.home-header {
+  display: flex;
+  align-items: center;
+  height: 30%;
+  padding-left: 100px;
+
+  h6 {
+    font-size: 24px;
+  }
+
+  #title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+  }
+}
+
+/* Input */
+.home-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+}
+
+.home-form {
+  /* This bit sets up the horizontal layout */
+  display: flex;
+  flex-direction: row;
+
+  /* This bit draws the box around it */
+  border: none;
+  padding: 10px 20px;
+
+  width: 40%;
+  background-color: white;
+  box-shadow: 0 15px 0 rgba(0,0,0,0.1);
+
+  input {
+    background-color: transparent;
+    padding: 0 10px;
+
+    /* Tell the input to use all the available space */
+    flex-grow: 2;
+
+    /* And hide the input's outline, so the form looks like the outline */
+    border: none;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  button {
+    /* Just a little styling to make it pretty */
+    border: none;
+    background: none;
+    color: black;
+    font-size: 24px;
+  }
+}
+
+/* Social Networks links */
+.home-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.home-links {
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
