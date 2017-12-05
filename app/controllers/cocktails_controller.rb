@@ -1,10 +1,11 @@
 class CocktailsController < ApplicationController
+  before_action :set_cocktail, only: [:edit, :update, :show]
+
   def index
    @cocktails = Cocktail.all
   end
 
   def show
-    @cocktail = Cocktail.find(params[:id])
   end
 
   def new # GET /tasks/new
@@ -22,11 +23,9 @@ class CocktailsController < ApplicationController
   end
 
   def edit
-    @cocktail = Cocktail.find(params[:id])
   end
 
   def update
-    @cocktail = Cocktail.find(params[:id])
     @cocktail.update(cocktail_params)
     # save method returns true when record enters database
     if @cocktail.save
@@ -37,6 +36,10 @@ class CocktailsController < ApplicationController
   end
 
   private
+
+  def set_cocktail
+    @cocktail = Cocktail.find(params[:id])
+  end
 
   def cocktail_params
     params.require(:cocktail).permit(:name, :photo)
