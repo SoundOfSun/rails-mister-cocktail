@@ -1,0 +1,115 @@
+/* Specific CSS for the About page */
+.about-layout {
+  background-color: $pink;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-layout {
+    height: calc(100vh - 70px);
+  }
+}
+
+/* TITLE */
+.about-title {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+
+  h1 {
+    letter-spacing: 0;
+    font-family: 'BenchNine', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: $white;
+    text-shadow: 0 6px 0 $d-pink;
+  }
+}
+
+/* INFO BOX */
+.about-creator, .about-tech {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-creator, .about-tech {
+    width: 70%;
+  }
+}
+
+.creator-card {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 6px 0 $d-pink;
+  background-color: $white;
+  padding: 15px 10px;
+}
+
+.creator-avatar {
+  margin: 0 auto;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  background-image: url('https://kitt.lewagon.com/placeholder/users/SoundOfSun');
+  background-size: cover;
+  background-position: center;
+}
+
+.creator-infos {
+  margin-top: 15px;
+  text-align: left;
+  padding-left: 20px;
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .creator-card {
+    display: flex;
+    align-items: center;
+  }
+
+  .creator-avatar {
+    flex: 0 0 150px;
+    margin: 0;
+  }
+
+  .creator-infos {
+    margin: 0;
+  }
+}
+
+a.gh-user-link, a.dribble-link {
+  &:link, &:hover, &:active, &:focus, &:visited {
+    text-decoration: none;
+    color: $d-pink;
+  }
+
+  &:hover{
+    color: $pink;
+  }
+}
+
+a.gh-user-link {
+  font-family: 'BenchNine', 'Helvetica', 'sans-serif';
+  font-size: 34px;
+}
+
+/* TECH LIST */
+.about-tech {
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  i {
+    font-size: 32px;
+    color: $d-pink;
+    margin: 10px;
+  }
+}

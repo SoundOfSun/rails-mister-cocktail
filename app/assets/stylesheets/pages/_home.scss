@@ -22,12 +22,14 @@
 
   h6 {
     font-size: 24px;
+    letter-spacing: 1px;
     margin: 0;
   }
 
   #title {
     font-family: 'Great Vibes', cursive;
     font-size: 32px;
+    margin-left: 5px;
   }
 }
 
@@ -79,7 +81,7 @@
     background: none;
     color: $orange;
     font-size: 18px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'BenchNine', sans-serif;
     font-weight: 700;
   }
 }
