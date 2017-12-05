@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag ('logo.png') %>
+    <%= image_tag ('logo.png') %> Miss Coktail
   <% end %>
 
   <!-- Right Navigation -->
@@ -9,7 +9,9 @@
     <%= link_to about_path, class: "navbar-wagon-item navbar-wagon-link" do %>
       About
     <% end %>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Cocktails</a>
+    <%= link_to cocktails_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+      Cocktails
+    <% end %>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
