@@ -3,6 +3,11 @@ class CocktailsController < ApplicationController
 
   def index
    @cocktails = Cocktail.all
+   if params[:search]
+     @cocktails = Cocktail.search(params[:search]).order("created_at DESC")
+   else
+     @cocktails = Cocktail.all.order('created_at DESC')
+   end
   end
 
   def show

@@ -6,6 +6,15 @@
     <% end %>
   </div>
 
+  <div class="cocktails-search-result text-center">
+    <% if @cocktails.present? %>
+      <p>Here is what we found:</p>
+    <% else %>
+      <p>Sorry, we haven't found a cocktail named "<%= params[:search] %>".</p>
+      <%= link_to 'Search again', root_path, class: 'search-link' %>
+    <% end %>
+  </div>
+
   <div class="cocktails-list">
     <div class="container-fluid">
       <div class="row">

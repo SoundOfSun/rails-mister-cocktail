@@ -1,6 +1,6 @@
 /* Specific CSS for the Index page */
 .cocktails-layout {
-  min-height: 100vh;
+  min-height: calc(100vh - 70px);
   background-color: $l-orange;
 }
 
@@ -16,6 +16,18 @@
     font-weight: 700;
     color: $white;
     text-shadow: 0 6px 0 $orange;
+    margin-bottom: 30px;
+  }
+}
+
+.cocktails-search-result {
+
+  p, a.search-link {
+    letter-spacing: 0;
+    font-family: 'BenchNine', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: $orange;
     margin-bottom: 30px;
   }
 }

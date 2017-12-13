@@ -17,8 +17,10 @@
   </div>
   <div class="home-input">
     <div class="home-form">
-      <input type="text" placeholder="Search for a cocktail">
-      <button>SEARCH</button>
+      <%= form_tag(cocktails_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search for a cocktail" %>
+      <%= submit_tag "Search" %>
+      <% end %>
     </div>
   </div>
   <div class="home-footer">
