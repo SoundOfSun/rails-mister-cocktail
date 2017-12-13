@@ -79,7 +79,7 @@
   }
 }
 
-a.gh-user-link, a.dribble-link {
+a.gh-user-link, a.dribble-link, a.lewagon-link {
   &:link, &:hover, &:active, &:focus, &:visited {
     text-decoration: none;
     color: $d-pink;
