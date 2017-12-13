@@ -1,0 +1,70 @@
+/* Specific CSS for the SHOW page */
+.cocktail-show-layout {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: $l-red;
+  display: block;
+}
+
+.cocktail-intro {
+  padding: 30px 20px;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    letter-spacing: 0;
+    font-family: 'BenchNine', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    color: $white;
+    text-shadow: 0 6px 0 $d-red;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.cocktail-recipe {
+  color: $white;
+  padding: 0 10px;
+
+  h2 {
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cocktail-show-layout {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: 50% 25% 25%;
+    // css grid [--1--] [--2--] pic ings
+    //          [------3------] ctas
+    //          [------4------] dose form
+  }
+
+  .cocktail-intro {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+  }
+
+  .cocktail-recipe {
+    grid-row: 1 / span 1;
+    column: 2 / span 2;
+  }
+
+  .cocktail-ctas {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
+
+  .cocktail-dose-form {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 2;
+  }
+}

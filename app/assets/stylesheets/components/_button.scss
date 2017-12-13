@@ -24,10 +24,10 @@
 .fa.fa-trash {
   font-size: 24px;
   margin-left: 10px;
-  color: rgb(26,139,157);
-  opacity: 1;
+  color: $white;
+
   &:hover {
-    opacity: 0.8;
+    color: $d-red;
   }
 }
 
