@@ -21,19 +21,27 @@
       <% @cocktail.doses.each do |dose| %>
         <p>
           - <%= dose.ingredient.name %> : <%= dose.description %>
-          <%= link_to dose_path(dose), method: :delete, data: {confirm: 'Are you sure?' } do %>
-            <i class="fa fa-trash"></i> (delete)
+          <%= link_to dose_path(dose), method: :delete, data: {
+              confirm: 'Are you sure?',
+              text: 'You won\'t be able to revert this!',
+              'confirm-button-text': 'Yes, delete it!',
+              'cancel-button-text': 'Cancel',
+              'sweet-alert-type': 'warning',
+              'confirm-button-color': 'rgb(126, 198, 76)',
+              'cancel-button-color': 'rgb(167,0,42)'
+            } do %>
+            <i class="fa fa-trash"></i>
           <% end %>
         </p>
         <% end %>
     </div>
   </div>
   <div class="cocktail-ctas">
-    <%= link_to "See all", cocktails_path, class: "btn btn-light" %>
+    <%= link_to "See all", cocktails_path, class: "show-btn" %>
 
-    <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-light" %>
+    <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "show-btn" %>
 
-    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-light" %>
+    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "show-btn" %>
   </div>
   <div class="cocktail-dose-form">
     <p>Here will go the dose form later</p>

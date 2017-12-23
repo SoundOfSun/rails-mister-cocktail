@@ -22,11 +22,18 @@
     margin-bottom: 30px;
     text-transform: uppercase;
   }
+
+  img {
+    box-shadow: 0 6px 0 $d-red;
+  }
 }
 
 .cocktail-recipe {
-  color: $white;
   padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
 
   h2 {
     font-size: 28px;
@@ -36,6 +43,26 @@
   p {
     margin-bottom: 5px;
   }
+}
+
+.cocktail-ingredients {
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 0 6px 0 $d-red;
+  padding: 10px 15px;
+
+  .ingredients-header h2 {
+    color: $d-red;
+  }
+
+  .ingredients-list {
+    overflow: scroll;
+  }
+}
+
+.cocktail-ctas {
+  padding: 20px 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -56,11 +83,14 @@
   .cocktail-recipe {
     grid-row: 1 / span 1;
     column: 2 / span 2;
+    justify-content: flex-start;
+    margin-bottom: 0;
   }
 
   .cocktail-ctas {
     grid-row: 2 / span 1;
     grid-column: 1 / span 2;
+    text-align: center;
   }
 
   .cocktail-dose-form {

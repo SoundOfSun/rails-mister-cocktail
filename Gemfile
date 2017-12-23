@@ -12,6 +12,10 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+# ALERTS
+gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
+gem 'sweet-alert2-rails'
+
 # IMAGE UPLOAD
 gem 'figaro'
 gem 'cloudinary', '1.1.7'
