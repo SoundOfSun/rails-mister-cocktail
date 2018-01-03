@@ -4,5 +4,8 @@
   </div>
   <div class="new-cocktail-form">
     <%= render 'form', { action: 'Add' } %>
+    <div class="new-cocktail-bonus">
+      <%= link_to '< Go back', cocktails_path, class: 'go-back-btn' %>
+    </div>
   </div>
 </div>
